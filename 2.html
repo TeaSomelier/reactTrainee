@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <style>
+        .container {
+          width: 500px;
+          padding: 20px;
+          margin: 0 auto;
+          border: 10px solid rgb(175, 84, 227);
+          border-radius: 5px;
+          color: rgb(10, 47, 234);
+          background-color: rgb(108, 229, 227);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          font-size: 60px;
+          font-style: inherit;
+        }
+  
+        .title {
+          color: coral;
+          font-size: 30px;
+          font-style: italic;
+        }
+  
+        .inputClass {
+          background-color: #f8f666;
+          width: 150px;
+          height: 20px;
+        }
+      </style>
+      
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+    <script type="text/babel">
+      let span = React.createElement(
+        "span",
+        { className: "title" },
+        "Это текст в span"
+      );
+
+      let input = React.createElement("input", { className: "inputClass" });
+
+      let div = React.createElement(
+        "div",
+        { className: "container" },
+        "Это текст в div",
+        span,
+        input
+      );
+
+      ReactDOM.render(div, document.getElementById("root"));
+    </script>
+  </body>
+</html>

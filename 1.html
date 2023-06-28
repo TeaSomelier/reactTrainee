@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        width: 500px;
+        padding: 20px;
+        margin: 0 auto;
+        border: 10px solid rgb(175, 84, 227);
+        border-radius: 5px;
+        color: rgb(10, 47, 234);
+        background-color: rgb(108, 229, 227);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 60px;
+        font-style: inherit;
+      }
+
+      .title {
+        color: coral;
+        font-size: 30px;
+        font-style: italic;
+      }
+
+      .inputClass {
+        background-color: #f8f666;
+        width: 150px;
+        height: 20px;
+      }
+    </style>
+
+    <script>
+      let div = document.createElement("div");
+      let span = document.createElement("span");
+      let input = document.createElement("input");
+
+      div.className = "container";
+      span.className = "title";
+      input.className = "inputClass";
+
+      div.innerHTML = " Это текст в div";
+      span.innerHTML = " Это текст в span";
+
+      div.append(span);
+      div.append(input);
+
+      document.body.append(div);
+    </script>
+  </body>
+</html>
